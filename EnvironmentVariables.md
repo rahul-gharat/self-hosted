@@ -36,50 +36,50 @@ If not set, system will access above `DOMAIN` with `http` protocol. with this, y
 #### `LICENSE_KEY`
 This is a unique key assigned to you by DronaHQ. you can get by logging in to [Self-Hosted Portal](https://studio.dronahq.com/selfhosted/login).
 
-#### `DHQ_SELF_HOSTED_LICENSE_URL` (optional)
+#### `DRONAHQ_LICENSE_URL` (optional)
 
 For activation and licensing of your self hosted installation, DronaHQ needs to communicate with its in house licensing server hosted on `license.dronahq.com` with public IP as `52.203.193.48`. If you are working in closed intranet environment then you need to whitelist this domain for `outbound traffic`. Optionally you can set-up a proxy to DronaHQ's licensing system and update your proxy url here.
 
-    DHQ_SELF_HOSTED_LICENSE_URL='https://license.dronahq.com'
+    DRONAHQ_LICENSE_URL='https://license.dronahq.com'
 
 ### Connectivity to MySQL (for DronaHQ)
 
 Provide your database credentials for DronaHQ self hosted. Your installation will access this database and read/write into it. to store information about resources used for building apps and some meta information.
 
-#### `DHQ_MYSQL_HOST`, `DHQ_MYSQL_PORT`, `DHQ_MYSQL_USER`, `DHQ_MYSQL_PASSWORD`
+#### `MYSQL_HOST`, `MYSQL_PORT`, `MYSQL_USER`, `MYSQL_PASSWORD`
 
 If you are using Docker container for mysql, then you should set these variables as folows
 
-    DHQ_MYSQL_HOST='dronahq-self-hosted-mysqldb'
-    DHQ_MYSQL_USER='<application user>'
-    DHQ_MYSQL_PASSWORD='<password>'
-    DHQ_MYSQL_PORT='3306'
+    MYSQL_HOST='dronahq-self-hosted-mysqldb'
+    MYSQL_USER='<application user>'
+    MYSQL_PASSWORD='<password>'
+    MYSQL_PORT='3306'
 
 if you are using RDS or any other managed MySQL service then you can set variables accordingly.
 
 ### Connectivity to MySQL (for Audit Logs - optional)
-#### `DHQ_AUDIT_LOG_MYSQL_HOST`, `DHQ_AUDIT_LOG_MYSQL_PORT`, `DHQ_AUDIT_LOG_MYSQL_USER`, `DHQ_AUDIT_LOG_MYSQL_PASSWORD`
+#### `AUDIT_LOG_MYSQL_HOST`, `AUDIT_LOG_MYSQL_PORT`, `AUDIT_LOG_MYSQL_USER`, `AUDIT_LOG_MYSQL_PASSWORD`
 
 This are optional variables. If not set, DronaHQ will use same credentials you provided in above variables.
 
 If you are using Docker container for mysql, then you should set these variables as folows
 
-    DHQ_AUDIT_LOG_MYSQL_HOST='dronahq-self-hosted-mysqldb'
-    DHQ_AUDIT_LOG_MYSQL_USER='<application user>'
-    DHQ_AUDIT_LOG_MYSQL_PASSWORD='<password>'
-    DHQ_AUDIT_LOG_MYSQL_PORT='3306'
+    AUDIT_LOG_MYSQL_HOST='dronahq-self-hosted-mysqldb'
+    AUDIT_LOG_MYSQL_USER='<application user>'
+    AUDIT_LOG_MYSQL_PASSWORD='<password>'
+    AUDIT_LOG_MYSQL_PORT='3306'
 
 if you are using RDS or any other managed MySQL service then you can set variables accordingly.
 
 ### Connectivity to MongoDB
-#### `DHQ_MONGODB_HOST`, `DHQ_MONGODB_PORT`, `DHQ_MONGODB_USER`, `DHQ_MONGODB_PASSWORD`
+#### `MONGODB_HOST`, `MONGODB_PORT`, `MONGODB_USER`, `MONGODB_PASSWORD`
 
 If you are using Docker container for MongoDB, then you should set these variables as folows
 
-    DHQ_MONGODB_HOST='dronahq-self-hosted-mongodb'
-    DHQ_MONGODB_USER='<application user>'
-    DHQ_MONGODB_PASSWORD='<password>'
-    DHQ_MONGODB_PORT='27017'
+    MONGODB_HOST='dronahq-self-hosted-mongodb'
+    MONGODB_USER='<application user>'
+    MONGODB_PASSWORD='<password>'
+    MONGODB_PORT='27017'
 
 if you are using DocumentDB or any other managed MongoDB service then you can set variables accordingly.
 
@@ -195,4 +195,10 @@ DronaHQ runs following script while initializing container to create application
     }]
     })
 
-<!-- ## Other -->
+## Other
+
+#### `SENDGRID_API_KEY`
+#### `MAILER_EMAIL`
+#### `MAILER_NAME`
+#### `SESSION_KEY_NAME`
+#### `SESSION_KEY_SECRET`
