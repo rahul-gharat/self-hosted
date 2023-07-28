@@ -102,6 +102,7 @@ echo ""
 
 if ! command_present mysql; then
     log_step "mysql client not present. downloading it."
+    echo ''
     $MAYBE_SUDO chmod 755 install-mysql.sh
     ./install-mysql.sh
     echo ''
