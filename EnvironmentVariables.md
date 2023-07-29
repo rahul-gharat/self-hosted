@@ -194,5 +194,11 @@ DronaHQ runs following script while initializing container to create application
         db: 'db5x_studio'
     }]
     })
+    
+#### `MONGODB_PARAMS`
+
+#### `DOCUMENTDB_SSL`
+
+#### `DOCUMENTDB_SSL_CA_FILE`
 
 <!-- ## Other -->

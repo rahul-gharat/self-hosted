@@ -60,7 +60,7 @@ log_warn() {
 }
 
 echo ""
-read -p "Enter DronaHQ License Proxy url. If you dont need to setup proxy, press Enter: " DHQ_SELF_HOSTED_LICENSE_URL
+read -p "Enter DronaHQ License Proxy url. If you dont need to setup proxy, press Enter : " DHQ_SELF_HOSTED_LICENSE_URL
 # DHQ_SELF_HOSTED_LICENSE_URL=''
 
 if [ -z "$DHQ_SELF_HOSTED_LICENSE_URL" ]; then
@@ -93,7 +93,7 @@ echo "Enter credentials of your MongoDB server"
 echo ""
 
 read -p "Enter database host : " mongohost
-read -p "Enter port number": mongoport
+read -p "Enter port number : " mongoport
 read -p "Enter admin username : " mongouser
 read -p "Enter admin password : " mongopassword
 echo ""
@@ -113,9 +113,9 @@ echo ''
 
 # ------------------------------------------------------------------------------------------------
 
-read -p "Are you using DocumentDB with SSL? (y/n):" isSsl
+read -p "Are you using DocumentDB with SSL? (y/n) : " isSsl
 if [[ "$isSsl" == "y" ]]; then
-    read -p "Enter SSL file name:" tlskey
+    read -p "Enter SSL file name : " tlskey
     mongorestore --ssl --host=$mongohost --port=$mongoport --username=$mongouser --password=$mongopassword --sslCAFile=$tlskey --archive=mongo-init.dump
 else
     mongorestore --host=$mongohost --port=$mongoport --username=$mongouser --password=$mongopassword --archive=mongo-init.dump
