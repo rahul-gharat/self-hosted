@@ -204,11 +204,20 @@ DronaHQ runs following script while initializing container to create application
 ## Other
 
 #### `SENDGRID_API_KEY`
+
 #### `MAILER_EMAIL`
+
 #### `MAILER_NAME`
+
 #### `SESSION_KEY_NAME`
+
 #### `SESSION_KEY_SECRET`
+
 #### `SSH_TUNNEL_USER`
+
 #### `LD_LIBRARY_PATH`
+
 #### `SECRET_API_TOKEN_KEY`
+
 #### `ENCRYPTION_KEY`
+ 
