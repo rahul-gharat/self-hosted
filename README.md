@@ -42,8 +42,6 @@ Releases are added and maintained on [DockerHub](https://hub.docker.com/r/dronah
 1. Navigate to your server's IP address in a web browser. DronaHQ should now be running on port `8080`.
 1. Click Activate, since we're starting from a clean slate. The first user to create an account on an instance becomes the administrator.
 
-
-
 ### AWS Deploy With EC2
 
 Spin up a new EC2 instance. If using AWS, use the following steps:
